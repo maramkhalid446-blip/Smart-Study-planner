@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>Python Practice | Smart Study Planner</title>
+
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- CodeMirror -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css"
+  />
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/theme/material-darker.min.css"
+  />
+
+</head>
+
+<body>
+
+<header class="hero small-hero">
+
+  <div class="hero-content">
+
+    <div>
+      <p class="tag">PYTHON PRACTICE</p>
+      <h1>Interactive Coding Lab</h1>
+
+      <p class="hero-text">
+        Practice Python directly in your browser with real-time execution.
+      </p>
+    </div>
+
+    <button
+      id="themeToggle"
+      class="theme-toggle"
+      aria-label="Toggle dark mode"
+    >
+      🌙
+    </button>
+
+  </div>
+
+</header>
+
+<nav class="navbar" aria-label="Main Navigation">
+
+  <a href="index.html">Home</a>
+  <a href="subject.html">Subjects</a>
+  <a href="resources.html">Resources</a>
+  <a href="python.html" class="active">Python Lab</a>
+
+</nav>
+
+<main class="container">
+
+  <!-- Editor Section -->
+
+  <section class="card fade-up">
+
+    <div class="section-title">
+      <h2>Python Code Editor</h2>
+      <p>Write and execute Python code instantly.</p>
+    </div>
+
+    <div class="editor-wrapper">
+
+      <textarea id="codeEditor">
+print("Hello, Smart Study Planner!")
+      </textarea>
+
+    </div>
+
+    <div class="editor-actions">
+
+      <button
+        id="runCode"
+        class="primary-btn"
+      >
+        ▶ Run Code
+      </button>
+
+      <button
+        id="clearCode"
+        class="secondary-btn"
+      >
+        Clear
+      </button>
+
+    </div>
+
+  </section>
+
+  <!-- Output -->
+
+  <section class="card fade-up delay-1">
+
+    <div class="section-title">
+      <h2>Output Console</h2>
+    </div>
+
+    <div
+      id="output"
+      class="output-console"
+      aria-live="polite"
+    >
+      Ready...
+    </div>
+
+  </section>
+
+  <!-- Exercises -->
+
+  <section class="card fade-up delay-2">
+
+    <div class="section-title">
+      <h2>Python Challenges</h2>
+
+      <p>
+        Beginner-friendly exercises to improve your programming skills.
+      </p>
+    </div>
+
+    <div class="exercise-grid">
+
+      <!-- Exercise -->
+
+      <article class="exercise-card">
+
+        <h3>1. Even or Odd</h3>
+
+        <p>
+          Ask the user for a number and print whether it is even or odd.
+        </p>
+
+        <div class="hint-box">
+          <strong>Hint:</strong> Use the modulus operator %
+        </div>
+
+        <div class="expected-output">
+          <strong>Expected Output:</strong>
+          <p>4 is an even number</p>
+        </div>
+
+      </article>
+
+      <!-- Exercise -->
+
+      <article class="exercise-card">
+
+        <h3>2. Temperature Checker</h3>
+
+        <p>
+          Ask the user for a temperature and display Hot or Cold.
+        </p>
+
+        <div class="hint-box">
+          <strong>Hint:</strong> Use if/else statements
+        </div>
+
+        <div class="expected-output">
+          <strong>Expected Output:</strong>
+          <p>Hot weather</p>
+        </div>
+
+      </article>
+
+      <!-- Exercise -->
+
+      <article class="exercise-card">
+
+        <h3>3. Multiplication Table</h3>
+
+        <p>
+          Print the multiplication table for a chosen number.
+        </p>
+
+        <div class="hint-box">
+          <strong>Hint:</strong> Use a for loop
+        </div>
+
+        <div class="expected-output">
+          <strong>Expected Output:</strong>
+          <p>5 × 1 = 5</p>
+        </div>
+
+      </article>
+
+    </div>
+
+  </section>
+
+</main>
+
+<!-- CodeMirror -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/python/python.min.js"></script>
+
+<!-- Pyodide -->
+<script src="https://cdn.jsdelivr.net/pyodide/v0.26.2/full/pyodide.js"></script>
+
+<script src="script.js"></script>
+
+</body>
+</html>
